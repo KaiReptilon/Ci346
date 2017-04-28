@@ -1,16 +1,21 @@
 {
-  "name": "reactapp",
+  "name": "ci346project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaiReptilon/Ci346.git"
+  },
   "author": "Aaron Edwards",
   "license": "MIT",
+  "homepage": "https://github.com/KaiReptilon/Ci346/#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "jquery": "^3.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "webpack": "^2.2.1"

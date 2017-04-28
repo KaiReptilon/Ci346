@@ -1,4 +1,4 @@
-ar path = require('path');
+var path = require('path');
 
 module.exports = {
     entry: './src/main/webapp/js/main.js',
