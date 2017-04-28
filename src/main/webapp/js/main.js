@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-class WhateverYouWant extends React.Component {
+class WhatEverYouWant extends React.Component {
 	render() {
 		return(
-			<h1> hello world </h1>
+			<h1> arbitrary text </h1>
 		);
 	}
 }

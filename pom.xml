@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.aaronedwards.ci346</groupId>
-    <artifactId>CI346WebAPIProject</artifactId>
+    <artifactId>CI346</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
