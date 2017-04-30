@@ -9546,16 +9546,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WhatEverYouWant = function (_React$Component) {
-	_inherits(WhatEverYouWant, _React$Component);
+var WebApplication = function (_React$Component) {
+	_inherits(WebApplication, _React$Component);
 
-	function WhatEverYouWant() {
-		_classCallCheck(this, WhatEverYouWant);
+	function WebApplication() {
+		_classCallCheck(this, WebApplication);
 
-		return _possibleConstructorReturn(this, (WhatEverYouWant.__proto__ || Object.getPrototypeOf(WhatEverYouWant)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (WebApplication.__proto__ || Object.getPrototypeOf(WebApplication)).apply(this, arguments));
 	}
 
-	_createClass(WhatEverYouWant, [{
+	_createClass(WebApplication, [{
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
@@ -9566,7 +9566,7 @@ var WhatEverYouWant = function (_React$Component) {
 		}
 	}]);
 
-	return WhatEverYouWant;
+	return WebApplication;
 }(_react2.default.Component);
 
 (0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('target'));
