@@ -11,7 +11,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class Employees {
+public class EmployeeData {
 
     private @Id @GeneratedValue Long EmployeeId;
 
@@ -21,9 +21,9 @@ public class Employees {
     private String ShiftFinishTime;
     private String ShiftType;
 
-    private Employees() {}
+    private EmployeeData() {}
 
-    public Employees( String firstName, String Surname, String Start, String Finish, String Type){
+    public EmployeeData( String firstName, String Surname, String Start, String Finish, String Type){
 
         this.EmployeeFirstName = firstName;
         this.EmployeeSurname = Surname;
