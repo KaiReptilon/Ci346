@@ -9547,26 +9547,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var WebApplication = function (_React$Component) {
-	_inherits(WebApplication, _React$Component);
+    _inherits(WebApplication, _React$Component);
 
-	function WebApplication() {
-		_classCallCheck(this, WebApplication);
+    function WebApplication(props) {
+        _classCallCheck(this, WebApplication);
 
-		return _possibleConstructorReturn(this, (WebApplication.__proto__ || Object.getPrototypeOf(WebApplication)).apply(this, arguments));
-	}
+        var _this = _possibleConstructorReturn(this, (WebApplication.__proto__ || Object.getPrototypeOf(WebApplication)).call(this, props));
 
-	_createClass(WebApplication, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'h1',
-				null,
-				' arbitrary text '
-			);
-		}
-	}]);
+        _this.state = { Employees: [] };
+        return _this;
+    }
 
-	return WebApplication;
+    _createClass(WebApplication, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            client({ method: 'GET', path: '/api/Employees' }).done(function (response) {
+                _this2.setState({ Employees: response.entity._embedded.Employees });
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(EmployeeList, { Employees: this.state.Employees });
+        }
+    }]);
+
+    return WebApplication;
 }(_react2.default.Component);
 
 (0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('target'));
