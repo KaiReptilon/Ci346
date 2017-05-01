@@ -15,43 +15,43 @@ public class Employees {
 
     private @Id @GeneratedValue Long EmployeeId;
 
-    private String EmployeeFirstName;
-    private String EmployeeSurname;
-    private String ShiftStartTime;
-    private String ShiftFinishTime;
-    private String ShiftType;
+    private String employeeFirstName;
+    private String employeeSurname;
+    private String shiftStartTime;
+    private String shiftFinishTime;
+    private String shiftType;
 
     private Employees() {}
 
     public Employees(String firstName, String Surname, String Start, String Finish, String Type){
 
-        this.EmployeeFirstName = firstName;
-        this.EmployeeSurname = Surname;
-        this.ShiftStartTime = Start;
-        this.ShiftFinishTime = Finish;
-        this.ShiftType = Type;
+        this.employeeFirstName = firstName;
+        this.employeeSurname = Surname;
+        this.shiftStartTime = Start;
+        this.shiftFinishTime = Finish;
+        this.shiftType = Type;
 
     }
 
 
     public String getFirstName(){
-        return this.EmployeeFirstName;
+        return this.employeeFirstName;
     }
 
     public String getSurname() {
-        return this.EmployeeSurname;
+        return this.employeeSurname;
     }
 
     public String getShiftStartTime() {
-        return this.ShiftStartTime;
+        return this.shiftStartTime;
     }
 
     public String getShiftFinishTime() {
-        return this.ShiftFinishTime;
+        return this.shiftFinishTime;
     }
 
     public String getShiftType() {
-        return this.ShiftType;
+        return this.shiftType;
     }
 }
 
