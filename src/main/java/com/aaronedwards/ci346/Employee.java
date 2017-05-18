@@ -1,59 +1,36 @@
 package com.aaronedwards.ci346;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.HashSet;
-import java.util.Set;
+import lombok.Data;
+import javax.persistence.*;
 
 /**
  * Created by aaron on 30/04/17.
  */
 
+@Data
 @Entity
 public class Employee {
 
-    @OneToMany(mappedBy = "employee")
-    private Set<Shift> shifts = new HashSet<>();
+    private @Id @GeneratedValue Long EmployeeId;
+    private String FirstName;
+    private String Surname;
+    private String description;
 
-    @Id
-    @GeneratedValue
-    private Long EmployeeId;
+    private Employee(){}
 
-    private String employeeFirstName;
-    private String employeeSurname;
-
-    public Employee(Long employeeId, String firstName, String Surname){
-
-        this.EmployeeId = employeeId;
-        this.employeeFirstName = firstName;
-        this.employeeSurname = Surname;
+    public Employee(String FirstName, String Surname, String description){
+        this.FirstName = FirstName;
+        this.Surname = Surname;
+        this.description = description;
     }
 
-    public Long getEmployeeId() {return this.EmployeeId; }
+    /*public Long getEmployeeId() {
+        return EmployeeId;
+    }*/
 
-    public String getFirstName(){
-        return this.employeeFirstName;
-    }
-
-    public String getSurname() {
-        return this.employeeSurname;
-    }
-
-    @JsonIgnore
-    public String firstName;
-    public String surname;
-
-    public Employee(String firstName, String surname){
-        this.employeeFirstName = firstName;
-        this.employeeSurname = surname;
-    }
-
-    Employee(){//jpa only
-    }
+    /*public void setShift(ShiftManager shiftManager){
+        this.shiftManager = shiftManager;
+    }*/
 
 }
 

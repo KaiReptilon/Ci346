@@ -5,22 +5,21 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by aaron on 30/04/17.
+ * Created by aaron on 18/05/17.
  */
-
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 
-    private final EmployeeDataRepository repository;
+    private final EmployeeRepository repository;
 
     @Autowired
-    public DatabaseLoader(EmployeeDataRepository repository) {
+    public DatabaseLoader(EmployeeRepository repository) {
         this.repository = repository;
     }
 
     @Override
     public void run(String... strings) throws Exception {
-        this.repository.save(new Employees("Akira", "Kurusu", "16:00",
-                "21:00", "Afternoon"));
+        this.repository.save(new Employee("John", "Smith",
+                "Janitor"));
     }
 }
